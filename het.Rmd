@@ -1,0 +1,85 @@
+---
+title: "het"
+author: "TMJ"
+date: "April 18, 2016"
+output: pdf_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+genos <- read.delim("out.012", header=FALSE)
+indiv <- read.table("out.012.indv", quote="\"", comment.char="")
+genos$V1 <- NULL
+gi <- cbind(indiv, genos)
+row.names(gi) <- gi$V1
+gi=gi[,-1]
+tgi <- as.data.frame(t(gi))
+
+```
+
+divide into seperate files
+
+```{r}
+samBC <- tgi[ ,1:3]
+samBM <- tgi[ ,4:6]
+gatBC <- tgi[ ,7:9]
+gatBM <- tgi[ ,10:12]
+```
+
+
+
+
+samBCt <- samBC[samBC[,1]==0 & samBC[,2]==2 & samBC[,3]!=-1,]
+dim(samBCt)
+totLoci <- sum(samBCt[,1]==0)
+totLoci
+refAllele <- sum(samBCt[,3]==0)
+refAllele
+altAllele <- sum(samBCt[,3]==2)
+altAllele
+hetAllele <- sum(samBCt[,3]==1)
+hetAllele
+
+hetaccuracy <- hetAllele/totLoci
+hetaccuracy*100
+
+function for finding het accuracy rate for each file
+```{r}
+hfx<-function(file){
+filet <- file[file[,1]==0 & file[,2]==2 & file[,3]!=-1,]
+dim(filet)
+refAllele <- sum(filet[,3]==0)
+refAllele
+altAllele <- sum(filet[,3]==2)
+altAllele
+hetAllele <- sum(filet[,3]==1)
+hetAllele
+totLoci <- sum(filet[,1]==0)
+totLoci
+hetaccuracy <- hetAllele/totLoci
+hetaccuracy*100
+}
+```
+
+run teh funciton across the 4 subfiles
+```{r}
+hetfiles <- list(samBC, samBM, gatBC, gatBM)
+result <- lapply(hetfiles, hfx)
+hetfilenames <- list("samBC", "samBM", "gatBC", "gatBM")
+results <- as.data.frame(cbind(hetfilenames, result))
+results$result <- as.numeric(results$result)
+```
+
+
+calculate averages for each method/method
+```{r}
+samavg <- (results[1,2]+results[2,2])/2
+samavg
+gatavg <- (results[3,2]+results[4,2])/2
+gatavg
+```
+
+
