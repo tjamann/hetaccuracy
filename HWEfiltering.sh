@@ -25,3 +25,5 @@ vcf-merge mpileup.filteredindiv.recode.vcf.gz GATK.filteredindiv.recode.vcf.gz f
 vcftools --vcf mpile.GATK.true.vcf --012
 
 #then run r script het.RMD
+R -e "rmarkdown::render('het.Rmd')"
+
