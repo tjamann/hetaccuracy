@@ -1,0 +1,35 @@
+filter sites with excess heterozygotes,,,cutoff,0.01,,Number filtered
+,hetfilenames,resultcorrecthybrid,resultcorrectparents,,,
+1,samBC,82.48175182,90.64171123,,,GATK
+2,samBM,81.58995816,86.66666667,,,Samtools
+3,gatBC,97.71689498,90.6779661,,,
+4,gatBM,95.16129032,85.50724638,,,
+,,,,,,
+filter sites with excess heterozygotes,,,cutoff,0.05,,
+,hetfilenames,resultcorrecthybrid,resultcorrectparents,,,
+1,samBC,82.39608802,90.59139785,,,GATK
+2,samBM,81.43459916,86.5470852,,,Samtools
+3,gatBC,97.70642202,91.02564103,,,
+4,gatBM,95.12195122,85.40145985,,,
+,,,,,,
+filter sites with excess heterozygotes,,,cutoff,0.1,,
+,hetfilenames,resultcorrecthybrid,resultcorrectparents,,,
+1,samBC,82.39608802,90.59139785,,,GATK
+2,samBM,81.43459916,86.5470852,,,Samtools
+3,gatBC,97.70642202,91.02564103,,,
+4,gatBM,95.12195122,85.40145985,,,
+,,,,,,
+filter on HW violations,,,cutoff,0.1,,
+,hetfilenames,resultcorrecthybrid,resultcorrectparents,,,
+1,samBC,89.78978979,90.06024096,,,GATK
+2,samBM,91.42857143,84.21052632,,,Samtools
+3,gatBC,97.91666667,89.52380952,,,
+4,gatBM,95.78947368,81.98198198,,,
+,,,,,,
+,,,,,,
+unfiltered,,,,,,
+,hetfilenames,resultcorrecthybrid,resultcorrectparents,,,
+1,samBC,82.48175182,88.28125,,,GATK
+2,samBM,81.58995816,79.91803279,,,Samtools
+3,gatBC,97.71689498,84.92063492,,,
+4,gatBM,95.27559055,75.1552795,,,

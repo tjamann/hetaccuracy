@@ -10,7 +10,7 @@ def to_drop(pval_file, pval=0.05):
    bonf = pval/loci
    print "CUTOFF   :: ", bonf
 
-   drop_list = tofilter[tofilter.P_HET_EXCESS <= bonf] # Rows to call FAILHW on
+   drop_list = tofilter[tofilter.P_HWE <= bonf] # Rows to call FAILHW on
    #need to filter out of vcf file
    print "TO DROP  :: ", len(drop_list)
    #save to sites to remove to dict or something and then change in vcf file those sites that fail p excess filter from PASS to FAILHWE in vcf tools
@@ -69,7 +69,7 @@ if __name__ == '__main__':
    args = parser.parse_args()
 
    for vcf in args.vcf_list:
-       OUT_NAME = "PHETE-FILTERED_"+ vcf
+       OUT_NAME = "HW-FILTERED_"+ vcf
        to_drop_list = to_drop(args.pval_file, args.pval)
        updated_vcf = update_filter_status(vcf, to_drop_list)
        merge_old(vcf, updated_vcf, OUT_NAME)
