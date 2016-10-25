@@ -53,6 +53,7 @@ vcftools --vcf HW.mpile.GATK.true.vcf --012
 #then run r script het.RMD
 R -e "rmarkdown::render('het.Rmd')"
 
+#this doesn't work
 mv out.012 outhe010.012 -i
 mv out.012.indv outhe010.012.indv -i
 mv out.012.pos outhe010.012.pos -i

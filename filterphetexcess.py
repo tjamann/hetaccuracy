@@ -13,9 +13,6 @@ def to_drop(pval_file, pval=0.05):
    drop_list = tofilter[tofilter.P_HET_EXCESS <= bonf] # Rows to call FAILHW on
    #need to filter out of vcf file
    print "TO DROP  :: ", len(drop_list)
-   #save to sites to remove to dict or something and then change in vcf file those sites that fail p excess filter from PASS to FAILHWE in vcf tools
-   #vcftools could then be used to remove those sites, otherwise delete this lines entirely that don't meet filter
-
    return drop_list[['CHR', 'POS']]
 
 def get_lines_till_header(vcf_file):
@@ -43,7 +40,7 @@ def update_filter_status(vcf_file, drop_list):
        pos = drop_list.loc[index]['POS']
 
        to_fail = vcf_pd[(vcf_pd['#CHROM'] == chrom ) & (vcf_pd['POS']== pos)].index
-       vcf_pd.loc[to_fail, 'FILTER'] = 'FAILHW'
+       vcf_pd.loc[to_fail, 'FILTER'] = 'FAILHWHET'
 
    # vcf_pd.set_index(['#CHROM'], inplace=True)
 
