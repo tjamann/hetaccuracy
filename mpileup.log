@@ -1,0 +1,15 @@
+
+VCFtools - v0.1.14
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf allsamplesafterfiltering.dupremoved.mpileup.vcf.gz
+	--hardy
+	--out mpileup
+
+Using zlib version: 1.2.5
+After filtering, kept 93 out of 93 Individuals
+Outputting HWE statistics (but only for biallelic loci)
+	HWE: Only using biallelic SNPs.
+After filtering, kept 1534 out of a possible 1534 Sites
+Run Time = 0.00 seconds
