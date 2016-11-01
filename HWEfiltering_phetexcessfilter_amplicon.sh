@@ -4,11 +4,14 @@ set -u
 
 date
 
-KEEP=$1
-GATK=$2
-GATKGZ=$3
-PVAL=$4
-COFF=$5
+KEEP=keep_seq.txt
+GATK=final.GATK.break.vcf.recode.vcf
+GATKGZ=final.GATK.break.vcf.recode.vcf.gz
+PVAL=0.01
+COFF=0.15
+
+#p value is what the cutoff is for individual variants
+#coff is the fraction of variants that if exceeded, the whole amplicon is removed
 
 #to remove duplicates from bedtools join 
 #awk '! a[$1" "$2]++' allsamplesafterfiltering.mpileup.vcf > allsamplesafterfiltering.dupremoved.mpileup.vcf
