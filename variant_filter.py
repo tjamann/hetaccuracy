@@ -100,7 +100,7 @@ def compare_amps(master_dict, drop_dict, drop_list, master_list, cutoff_val):
     to_drop = []
     # List comprehensions for optimal gains
     for amp in drop_dict:
-        if ( float(drop_dict[amp]) / master_dict[amp] ) <= cutoff_val:
+        if ( float(drop_dict[amp]) / master_dict[amp] ) >= cutoff_val:
             to_drop.append(amp)
 
     return to_drop

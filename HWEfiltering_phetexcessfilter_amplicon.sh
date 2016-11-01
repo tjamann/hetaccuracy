@@ -4,11 +4,11 @@ set -u
 
 date
 
-KEEP=keep_seq.txt
-PVAL=0.01
-GATK=final.GATK.break.vcf.recode.vcf
-GATKGZ=final.GATK.break.vcf.recode.vcf.gz
-COFF=0.90
+KEEP=$1
+GATK=$2
+GATKGZ=$3
+PVAL=$4
+COFF=$5
 
 #to remove duplicates from bedtools join 
 #awk '! a[$1" "$2]++' allsamplesafterfiltering.mpileup.vcf > allsamplesafterfiltering.dupremoved.mpileup.vcf

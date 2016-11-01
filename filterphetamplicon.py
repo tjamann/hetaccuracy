@@ -23,14 +23,15 @@ def to_drop(pval_file, vcf_file, amp_list, cutoff_val, pval=0.05):
     header_line = get_lines_till_header(vcf_file)
     vcf_pd = pandas.read_table(vcf_file, skiprows=header_line)
     drop_list, dropped_amps = variant_filter.process_to_drop(drop_list_raw, vcf_pd, amp_list, cutoff_val) # Does that magic to check if > x% of variants fail and fails the rest.
+    drop_list_unique = drop_list[['CHR', 'POS', 'AMP']].drop_duplicates()
 
 
     print "NUM LOCI ........ :: ", loci
     print "CUTOFF .......... :: ", bonf
     print "AMPLICONS REMOVED :: ", dropped_amps
-    print "TO DROP ......... :: \n", drop_list[['CHR', 'POS', 'AMP']].to_csv()
+    print "TO DROP ......... :: \n", drop_list_unique
 
-    return drop_list[['CHR', 'POS']]
+    return drop_list_unique
 
 def get_lines_till_header(vcf_file):
     header_line = 0
@@ -110,7 +111,7 @@ if __name__ == '__main__':
         OUT_NAME = "PHETE-FILTERED_"+ vcf
         amp_list = variant_filter.read_amp_file(args.amp_file)
 
-        to_drop_list = to_drop(args.pval_file, vcf, amp_list, args.cutoff, args.pval)
+        to_drop_list = (to_drop(args.pval_file, vcf, amp_list, args.cutoff, args.pval))
         updated_vcf = update_filter_status(vcf, to_drop_list)
         merge_old(vcf, updated_vcf, OUT_NAME)
 
