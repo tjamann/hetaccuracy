@@ -2,9 +2,16 @@ import pandas
 import csv
 import argparse
 import time
+import sys
 
 import variant_filter
+
+pandas.options.display.max_rows = 2000 
 # SAMPLE_CALL :: python filterphetexcess.py -vcf_list allsamplesafterfiltering.mpileup.vcf -pval_file out.hwe -amp_file ampliconregions.csv -cutoff 0.5 --pval 0.05
+
+orig_stdout=sys.stdout
+f=file('filtering.txt', 'w')
+sys.stdout=f
 
 def to_drop(pval_file, vcf_file, amp_list, cutoff_val, pval=0.05):
     tofilter = pandas.read_table(pval_file)
@@ -21,7 +28,7 @@ def to_drop(pval_file, vcf_file, amp_list, cutoff_val, pval=0.05):
     print "NUM LOCI ........ :: ", loci
     print "CUTOFF .......... :: ", bonf
     print "AMPLICONS REMOVED :: ", dropped_amps
-    print "TO DROP ......... :: \n", drop_list[['CHR', 'POS', 'AMP']]
+    print "TO DROP ......... :: \n", drop_list[['CHR', 'POS', 'AMP']].to_csv()
 
     return drop_list[['CHR', 'POS']]
 
@@ -108,3 +115,6 @@ if __name__ == '__main__':
         merge_old(vcf, updated_vcf, OUT_NAME)
 
     print 'RUNTIME  ::  {} [s]'.format(time.time() - start)
+    
+sys.stdout=orig_stdout
+f.close()

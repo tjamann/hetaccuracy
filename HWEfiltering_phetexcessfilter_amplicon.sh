@@ -8,7 +8,7 @@ KEEP=keep_seq.txt
 PVAL=0.01
 GATK=final.GATK.break.vcf.recode.vcf
 GATKGZ=final.GATK.break.vcf.recode.vcf.gz
-COFF=0.95
+COFF=0.90
 
 #to remove duplicates from bedtools join 
 #awk '! a[$1" "$2]++' allsamplesafterfiltering.mpileup.vcf > allsamplesafterfiltering.dupremoved.mpileup.vcf
@@ -40,18 +40,23 @@ rm -f GATK*
 #create the file with the hardy weinberg p values. we are going to try filtering on p values for excess hets first
 echo "GATK"
 vcftools --gzvcf $GATKGZ --hardy  --out GATK
+
 echo "mpileup"
 vcftools --gzvcf allsamplesafterfiltering.dupremoved.mpileup.vcf.gz --hardy --out mpileup
+
 
 #decompress for python script
 bgzip -d $GATKGZ
 bgzip -d allsamplesafterfiltering.dupremoved.mpileup.vcf.gz
 
 #the python script to remove the variants. right now there is a bonferroni correction and p value of 0.05. python script should change from pass to failhw filter
-echo "mpileup"
+echo "mpileup filtering"
 python filterphetamplicon.py -vcf_list allsamplesafterfiltering.dupremoved.mpileup.vcf -pval_file mpileup.hwe -amp_file ampliconregions.csv -cutoff $COFF --pval $PVAL
-echo "GATK"
+mv filtering.txt filteroutput.mpile.P$PVAL.A$COFF.txt
+
+echo "GATK filtering"
 python filterphetamplicon.py -vcf_list final.GATK.break.vcf.recode.vcf -pval_file GATK.hwe -amp_file ampliconregions.csv -cutoff $COFF --pval $PVAL
+mv filtering.txt filteroutput.GATK.P$PVAL.A$COFF.txt
 
 #recompress
 #does python script generate new file names?
@@ -81,4 +86,5 @@ R -e "rmarkdown::render('het.Rmd')"
 #mv out.012.pos outphetexcess.012.pos -i
 
 cat hetaccuracies.csv 
-mv hetaccuracies.csv hetaccuracies_phet.$PVAL.csv
+mv hetaccuracies.csv hetaccuracies_phet.P$PVAL.A$COFF.csv
+mv hetaccuraciesaverages.csv hetaccuracies_phet_averages.P$PVAL.A$COFF.csv
