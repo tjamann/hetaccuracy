@@ -1,6 +1,0 @@
-Xpress_0182.R_2015_08_24_16_56_10_user_PG1-118-NCSU-2.fastq
-Xpress_0183.R_2015_08_24_16_56_10_user_PG1-118-NCSU-2.fastq
-Xpress_0184.R_2015_08_24_16_56_10_user_PG1-118-NCSU-2.fastq
-Xpress_0190.R_2015_08_24_16_56_10_user_PG1-118-NCSU-2.fastq
-Xpress_0191.R_2015_08_24_16_56_10_user_PG1-118-NCSU-2.fastq
-Xpress_0192.R_2015_08_24_16_56_10_user_PG1-118-NCSU-2.fastq

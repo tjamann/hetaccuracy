@@ -1,0 +1,123 @@
+
+@----------------------------------------------------------@
+|        PLINK!       |     v1.07      |   10/Aug/2009     |
+|----------------------------------------------------------|
+|  (C) 2009 Shaun Purcell, GNU General Public License, v2  |
+|----------------------------------------------------------|
+|  For documentation, citation & bug-report instructions:  |
+|        http://pngu.mgh.harvard.edu/purcell/plink/        |
+@----------------------------------------------------------@
+
+Skipping web check... [ --noweb ] 
+Writing this text to log file [ plink.log ]
+Analysis started: Fri Nov  4 21:20:08 2016
+
+Options in effect:
+	--file GATKplink
+	--cluster
+	--mds-plot 2
+	--noweb
+
+1370 (of 1370) markers to be included from [ GATKplink.map ]
+Warning, found 93 individuals with ambiguous sex codes
+These individuals will be set to missing ( or use --allow-no-sex )
+Writing list of these individuals to [ plink.nosex ]
+93 individuals read from [ GATKplink.ped ] 
+0 individuals with nonmissing phenotypes
+Assuming a disease phenotype (1=unaff, 2=aff, 0=miss)
+Missing phenotype value is also -9
+0 cases, 0 controls and 93 missing
+0 males, 0 females, and 93 of unspecified sex
+ *** WARNING *** DUPLICATE MARKERS FOUND *** 
+Duplicate marker name found: [ 1:90224675 ]
+Duplicate marker name found: [ 1:239670530 ]
+Duplicate marker name found: [ 1:239670598 ]
+Duplicate marker name found: [ 1:239671752 ]
+Duplicate marker name found: [ PZE01238906029 ]
+Duplicate marker name found: [ PZE01238906323 ]
+Duplicate marker name found: [ 2:12649230 ]
+Duplicate marker name found: [ PZE0212545356 ]
+Duplicate marker name found: [ PZE02215745327 ]
+Duplicate marker name found: [ PZE02215745772 ]
+Duplicate marker name found: [ PZE02215746555 ]
+Duplicate marker name found: [ PZE02215746681 ]
+Duplicate marker name found: [ PZE02215751746 ]
+Duplicate marker name found: [ 2:219440370 ]
+Duplicate marker name found: [ 2:219440846 ]
+Duplicate marker name found: [ PZE0303939570 ]
+Duplicate marker name found: [ PZE0303939576 ]
+Duplicate marker name found: [ 3:3990896 ]
+Duplicate marker name found: [ PZE0303939592 ]
+Duplicate marker name found: [ 3:3994067 ]
+Duplicate marker name found: [ PZE0303943371 ]
+Duplicate marker name found: [ 3:3994952 ]
+Duplicate marker name found: [ PZE0304087999 ]
+Duplicate marker name found: [ PZE0304088031 ]
+Duplicate marker name found: [ PZE0304088168 ]
+Duplicate marker name found: [ PZE0304088706 ]
+Duplicate marker name found: [ PZE03217331513 ]
+Duplicate marker name found: [ 3:218983267 ]
+Duplicate marker name found: [ 3:218983286 ]
+Duplicate marker name found: [ 3:218984880 ]
+Duplicate marker name found: [ PZE03217334243 ]
+Duplicate marker name found: [ 3:218985731 ]
+Duplicate marker name found: [ PZE03217335122 ]
+Duplicate marker name found: [ 7:175585654 ]
+Duplicate marker name found: [ 8:123034226 ]
+Duplicate marker name found: [ PZE08130662434 ]
+Duplicate marker name found: [ PZE08130662396 ]
+Duplicate marker name found: [ 8:131517561 ]
+Duplicate marker name found: [ PZE08130661925 ]
+Duplicate marker name found: [ PZE08130661490 ]
+Duplicate marker name found: [ PZE08130661462 ]
+Duplicate marker name found: [ PZE08130733681 ]
+Duplicate marker name found: [ 8:131578352 ]
+Duplicate marker name found: [ 8:131578665 ]
+Duplicate marker name found: [ 8:131578669 ]
+Duplicate marker name found: [ PZE08130734482 ]
+Duplicate marker name found: [ PZE08130735875 ]
+Duplicate marker name found: [ PZE08130735906 ]
+Duplicate marker name found: [ PZE08130736054 ]
+Duplicate marker name found: [ PZE0934644907 ]
+Duplicate marker name found: [ PZE0934646671 ]
+Duplicate marker name found: [ 9:35637266 ]
+Duplicate marker name found: [ 9:106530400 ]
+Duplicate marker name found: [ PZE09102458714 ]
+Duplicate marker name found: [ PZE09102458865 ]
+Duplicate marker name found: [ PZE09105336893 ]
+Duplicate marker name found: [ 9:108447685 ]
+Duplicate marker name found: [ 9:123215592 ]
+Duplicate marker name found: [ 9:123217039 ]
+Duplicate marker name found: [ 10:94262563 ]
+Duplicate marker name found: [ PZE1094084897 ]
+Duplicate marker name found: [ PZE1094084902 ]
+
+Before frequency and genotyping pruning, there are 1370 SNPs
+Converting data to SNP-major format
+93 founders and 0 non-founders found
+19 SNPs with no founder genotypes observed
+Warning, MAF set to 0 for these SNPs (see --nonfounders)
+Writing list of these SNPs to [ plink.nof ]
+Total genotyping rate in remaining individuals is 0.707488
+0 SNPs failed missingness test ( GENO > 1 )
+0 SNPs failed frequency test ( MAF < 0 )
+Converting data to Individual-major format
+After frequency and genotyping pruning, there are 1370 SNPs
+After filtering, 0 cases, 0 controls and 93 missing
+After filtering, 0 males, 0 females, and 93 of unspecified sex
+
+ **Warning** this analysis typically requires whole-genome level data
+             to give accurate results 
+
+Clustering individuals based on genome-wide IBS
+Merge distance p-value constraint = 0
+Of these, 4278 are pairable based on constraints
+Writing cluster progress to [ plink.cluster0 ]
+Writing cluster solution (1) [ plink.cluster1 ]
+Writing cluster solution (2) [ plink.cluster2 ]
+Writing cluster solution (3) [ plink.cluster3 ]
+Writing MDS solution to [ plink.mds ] 
+MDS plot of individuals (not clusters)
+
+Analysis finished: Fri Nov  4 21:20:08 2016
+

@@ -1,0 +1,126 @@
+
+# Summary table 
+
+Name , Value
+Genome , AGPv3.27 
+Date , 2016-11-04 21:19
+SnpEff_version , SnpEff 4.1l (build 2015-10-03), by Pablo Cingolani
+Command_line_arguments , SnpEff  -csvStats snpeffbed.txt AGPv3.27 -i bed IAD66395_209_Designed.bed -s summaryintervals 
+Warnings , 72 
+Number_of_lines_in_input_file, 319
+Number_of_variants_before_filter, 319
+Number_of_not_variants , 319
+Number_of_variants_processed , 0
+Number_of_known_variants <br>(i.e. non-empty ID) , 0, 0% 
+Number_of_effects , 1013 
+Genome_total_length ,2067622303 
+Genome_effective_length ,0 
+Change_rate , 0 
+
+# Change rate by chromosome
+
+Chromosome , Length , Changes , Change_rate 
+
+# Effects by impact
+
+Type , Count , Percent 
+MODIFIER , 1013 , 100% 
+
+# Effects by functional class
+
+Type , Count , Percent 
+
+Missense_Silent_ratio, 0
+
+# Count by effects
+
+Type , Count , Percent 
+3_prime_UTR_variant , 33 , 3.257651% 
+5_prime_UTR_variant , 41 , 4.047384% 
+downstream_gene_variant , 283 , 27.936821% 
+exon_region , 94 , 9.279368% 
+intergenic_region , 149 , 14.708786% 
+intragenic_variant , 4 , 0.394867% 
+intron_variant , 91 , 8.983218% 
+splice_acceptor_variant+splice_donor_variant+splice_region_variant+3_prime_UTR_variant+intron_variant , 2 , 0.197433% 
+splice_acceptor_variant+splice_donor_variant+splice_region_variant+5_prime_UTR_variant+intron_variant , 5 , 0.493583% 
+splice_acceptor_variant+splice_donor_variant+splice_region_variant+intron_variant+exon_region , 20 , 1.974334% 
+splice_acceptor_variant+splice_region_variant+3_prime_UTR_variant+intron_variant , 4 , 0.394867% 
+splice_acceptor_variant+splice_region_variant+5_prime_UTR_variant+intron_variant , 4 , 0.394867% 
+splice_acceptor_variant+splice_region_variant+intron_variant+exon_region , 18 , 1.7769% 
+splice_donor_variant+intron_variant , 13 , 1.283317% 
+splice_donor_variant+splice_region_variant+5_prime_UTR_variant+intron_variant , 1 , 0.098717% 
+splice_donor_variant+splice_region_variant+intron_variant+exon_region , 24 , 2.3692% 
+splice_region_variant+exon_region , 54 , 5.330701% 
+splice_region_variant+intron_variant , 4 , 0.394867% 
+upstream_gene_variant , 169 , 16.683119% 
+
+# Count by genomic region
+
+Type , Count , Percent 
+DOWNSTREAM , 283 , 27.936821% 
+EXON , 94 , 9.279368% 
+INTERGENIC , 149 , 14.708786% 
+INTRON , 91 , 8.983218% 
+NONE , 4 , 0.394867% 
+SPLICE_SITE_ACCEPTOR , 53 , 5.231984% 
+SPLICE_SITE_DONOR , 38 , 3.751234% 
+SPLICE_SITE_REGION , 58 , 5.725568% 
+UPSTREAM , 169 , 16.683119% 
+UTR_3_PRIME , 33 , 3.257651% 
+UTR_5_PRIME , 41 , 4.047384% 
+
+# Quality 
+
+
+# InDel lengths
+
+
+# Base changes
+
+base  , A  , C  , G  , T 
+ A  , 0  , 0  , 0  , 0 
+ C  , 0  , 0  , 0  , 0 
+ G  , 0  , 0  , 0  , 0 
+ T  , 0  , 0  , 0  , 0 
+
+# Ts/Tv summary
+
+Transitions , 0
+Transversions , 0
+Ts_Tv_ratio , 0
+
+# Ts/Tv : All variants
+
+No results available (empty input?)
+
+# Ts/Tv : Known variants
+
+No results available (empty input?)
+
+# Allele frequency
+
+# Allele frequency : All variants
+
+Values , 
+Count , 
+
+# Allele Count
+
+Values , 
+Count , 
+
+# Hom/Het table
+
+
+
+# Codon change table
+	
+codons 
+
+# Amino acid change table
+
+aa 
+
+# Chromosome change table
+

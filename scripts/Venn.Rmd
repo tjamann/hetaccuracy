@@ -1,0 +1,46 @@
+---
+title: "Venn Diagram"
+author: "TMJ"
+date: "November 4, 2016"
+output: pdf_document
+---
+```{r}
+library(VennDiagram)
+library(RColorBrewer)
+jBrewColors <- brewer.pal(n = 3, name = "Set2")
+#library(extrafont)
+```
+
+Make the venn diagram. These numbers are based on teh results from 10-12-2015.
+```{r}
+venn <- draw.triple.venn(
+	area1 = 1244,
+	area2 = 1486,
+	area3 = 2891,
+	n12 = 1125,
+	n23 = 972,
+	n13 = 820,
+	n123 = 793,
+	category = c("GATK", "SAMtools", "HapMapv3"),
+	fill = jBrewColors,
+	cat.fontfamily = "Arial",
+	lwd = rep(3, 3), lty =
+    rep("solid", 3), col = rep("black", 3),
+	alpha = 0.5,
+	fontfamily = "Arial",
+	cex = 2,
+	cat.cex = 2,
+	cat.col = c("black", "black", "black")
+	);
+grid.draw(venn)
+
+```
+
+Save to a file
+
+```{r}
+tiff(filename= "Triple_Venn_diagram.tiff", width = 2500, height = 2500, unit = "px", res = 300)
+grid.draw(venn)
+dev.off()
+```
+

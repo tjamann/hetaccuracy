@@ -1,0 +1,49 @@
+Type,Percent,Method,Position
+intergenic region,15.7,ZGATK,1
+intergenic region,14.47,AHapMap3,1
+intergenic region,15.21,SSamtools,1
+upstream gene variant,20.12,ZGATK,2
+upstream gene variant,18.11,AHapMap3,2
+upstream gene variant,18.51,SSamtools,2
+5 prime UTR premature start codon gain variant,0.3,ZGATK,3
+5 prime UTR premature start codon gain variant,0.57,AHapMap3,3
+5 prime UTR premature start codon gain variant,0.6,SSamtools,3
+5 prime UTR variant,4.01,ZGATK,4
+5 prime UTR variant,3.96,AHapMap3,4
+5 prime UTR variant,4.76,SSamtools,4
+initiator codon variant,0,ZGATK,5
+initiator codon variant,0.01,AHapMap3,5
+initiator codon variant,0,SSamtools,5
+synonymous variant,4.69,ZGATK,6
+synonymous variant,3.64,AHapMap3,6
+synonymous variant,4.36,SSamtools,6
+missense variant,3.33,ZGATK,7
+missense variant,3.34,AHapMap3,7
+missense variant,3.6,SSamtools,7
+splice region variant,0.03,ZGATK,8
+splice region variant,0.02,AHapMap3,8
+splice region variant,0.02,SSamtools,8
+missense variant+splice region variant,0,ZGATK,9
+missense variant+splice region variant,0.02,AHapMap3,9
+missense variant+splice region variant,0,SSamtools,9
+splice region variant+intron variant,0.08,ZGATK,10
+splice region variant+intron variant,0.21,AHapMap3,10
+splice region variant+intron variant,0.1,SSamtools,10
+intron variant,14.64,ZGATK,11
+intron variant,15.14,AHapMap3,11
+intron variant,14.47,SSamtools,11
+splice acceptor variant+intron variant,0.08,ZGATK,12
+splice acceptor variant+intron variant,0.03,AHapMap3,12
+splice acceptor variant+intron variant,0.07,SSamtools,12
+stop gained,0.16,ZGATK,13
+stop gained,0.08,AHapMap3,13
+stop gained,0.13,SSamtools,13
+stop lost,0,ZGATK,14
+stop lost,0.01,AHapMap3,14
+stop lost,0,SSamtools,14
+3 prime UTR variant,3,ZGATK,15
+3 prime UTR variant,2.7,AHapMap3,15
+3 prime UTR variant,2.84,SSamtools,15
+downstream gene variant,33.86,ZGATK,16
+downstream gene variant,37.7,AHapMap3,16
+downstream gene variant,35.29,SSamtools,16
